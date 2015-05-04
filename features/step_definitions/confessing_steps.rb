@@ -10,3 +10,7 @@ end
 Then(/^my confession should appear on the homepage$/) do
   expect(page).to have_content("I have sinned")
 end
+
+Then(/^there should be no confessions listed$/) do
+  expect(page).not_to have_css(".confession")
+end
